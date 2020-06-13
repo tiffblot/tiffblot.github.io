@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap");
+
+:root {
+  --max-page-size: 1200px;
+  --text-primary: black;
+  --text-secondary: #ff7630;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--text-secondary);
+}
+
+.App-page {
+  width: 100%;
+  max-width: var(--max-page-size);
+  padding: 0 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
