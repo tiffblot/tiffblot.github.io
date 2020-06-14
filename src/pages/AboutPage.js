@@ -4,8 +4,14 @@ import Box from "ui-box";
 export const AboutPage = () => {
   return (
     <Box className="App-page">
-      I strive to make whimsical, nostalgic art that brings color and happiness
-      to everyday living.
+      <p>
+        I strive to make whimsical, nostalgic art that brings color and
+        happiness to everyday living.
+      </p>
+      <p>
+        email:{" "}
+        <a href="mailto:teashopbytiff@gmail.com">teashopbytiff@gmail.com</a>
+      </p>
     </Box>
   );
 };

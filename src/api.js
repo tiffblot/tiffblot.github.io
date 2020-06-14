@@ -10,5 +10,5 @@ const request = fetchival(apiBase, {
 });
 
 export const getGallery = () => {
-  return request("album/sF6imnS").get();
+  return request("album/kzyymdC").get();
 };

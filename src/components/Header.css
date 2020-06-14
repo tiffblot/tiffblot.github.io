@@ -19,6 +19,12 @@
   font-weight: 500;
   font-size: 1.1rem;
 }
+.Header-link a {
+  color: var(--text-primary);
+}
+.Header-link a:hover {
+  color: var(--text-secondary);
+}
 
 .Header-hamburger {
   display: none;
