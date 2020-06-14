@@ -7,6 +7,7 @@ import "./Gallery.css";
 
 export const Gallery = ({ filter }) => {
   const [images, setImages] = useState([]);
+  const [columns, setColumns] = useState([0, 1, 2]);
 
   const loadImages = async () => {
     try {
@@ -22,7 +23,6 @@ export const Gallery = ({ filter }) => {
               .map((tag) => tag.slice(tag.indexOf("#") + 1))
           : [],
       }));
-      console.log(resultImages);
       return resultImages;
     } catch (e) {
       console.error(e);
@@ -40,20 +40,39 @@ export const Gallery = ({ filter }) => {
     updateImages();
   }, []);
 
+  useEffect(() => {
+    const screenWidth = window.screen.width;
+    if (screenWidth < 600) setColumns([0]);
+    else if (screenWidth < 900) setColumns([0, 1]);
+    else setColumns([0, 1, 2]);
+  }, [window.screen.width]);
+
   return (
     <>
       <Box className="App-page Gallery-container">
-        {images.map((img, i) => (
-          <Box key={i} className="Gallery-single">
-            <Box
-              is="img"
-              className="Gallery-image"
-              src={img.src}
-              alt={img.description}
-            />
-            <Box className="Gallery-description">{img.description}</Box>
-          </Box>
-        ))}
+        {columns.map((col) => {
+          return (
+            <Box key={"col" + col}>
+              {images
+                .filter((_, i) => i % columns.length === col)
+                .map((img, i) => {
+                  return (
+                    <Box key={i} className="Gallery-single">
+                      <Box
+                        is="img"
+                        className="Gallery-image"
+                        src={img.src}
+                        alt={img.description}
+                      />
+                      <Box className="Gallery-description">
+                        {img.description}
+                      </Box>
+                    </Box>
+                  );
+                })}
+            </Box>
+          );
+        })}
       </Box>
     </>
   );
