@@ -8,6 +8,7 @@ import "./Gallery.css";
 export const Gallery = ({ filter }) => {
   const [images, setImages] = useState([]);
   const [columns, setColumns] = useState([0, 1, 2]);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const loadImages = async () => {
     try {
@@ -29,6 +30,16 @@ export const Gallery = ({ filter }) => {
     }
   };
 
+  const calculateColumns = () => {
+    if (screenWidth < 600) {
+      if (columns.length !== 1) setColumns([0]);
+    } else if (screenWidth < 900) {
+      if (columns.length !== 2) setColumns([0, 1]);
+    } else {
+      if (columns.length !== 3) setColumns([0, 1, 2]);
+    }
+  };
+
   useEffect(() => {
     const updateImages = async () => {
       const resultImages = await loadImages();
@@ -38,14 +49,14 @@ export const Gallery = ({ filter }) => {
       setImages(filteredImages);
     };
     updateImages();
+    window.addEventListener("resize", () => {
+      setScreenWidth(window.innerWidth);
+    });
   }, []);
 
   useEffect(() => {
-    const screenWidth = window.screen.width;
-    if (screenWidth < 600) setColumns([0]);
-    else if (screenWidth < 900) setColumns([0, 1]);
-    else setColumns([0, 1, 2]);
-  }, [window.screen.width]);
+    calculateColumns();
+  }, [screenWidth]);
 
   return (
     <>
