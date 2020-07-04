@@ -82,6 +82,11 @@ export const Gallery = ({ filter, download = false }) => {
                             is="a"
                             marginLeft=".4em"
                             href={img.src}
+                            download={
+                              img.description
+                                ? img.description.split(" ")[0] + ".png"
+                                : "tiffblot.png"
+                            }
                             title={img.description}
                           >
                             [download]
