@@ -5,7 +5,7 @@ import { getGallery } from "../api";
 
 import "./Gallery.css";
 
-export const Gallery = ({ filter }) => {
+export const Gallery = ({ filter, download = false }) => {
   const [images, setImages] = useState([]);
   const [columns, setColumns] = useState([0, 1, 2]);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -77,6 +77,16 @@ export const Gallery = ({ filter }) => {
                       />
                       <Box className="Gallery-description">
                         {img.description}
+                        {download && (
+                          <Box
+                            is="a"
+                            marginLeft=".4em"
+                            href={img.src}
+                            title={img.description}
+                          >
+                            [download]
+                          </Box>
+                        )}
                       </Box>
                     </Box>
                   );

@@ -45,6 +45,7 @@ export const Header = () => {
         </li>
         <HeaderLink to="/">watercolor</HeaderLink>
         <HeaderLink to="/graphics">graphics</HeaderLink>
+        <HeaderLink to="/downloads">downloads</HeaderLink>
         <HeaderLink to="/about">about</HeaderLink>
         <HeaderLink href="https://www.etsy.com/shop/teashopbytiff">
           shop
