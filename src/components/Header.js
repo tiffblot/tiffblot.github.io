@@ -28,7 +28,7 @@ export const Header = () => {
   return (
     <Box className="App-page Header-container">
       <Link to="/">
-        <Box is="img" alt="Tiff" src="tiff-logo.svg" />
+        <Box is="img" alt="Tiff" src="tiff_logo_2022.png" />
       </Link>
 
       <Menu
