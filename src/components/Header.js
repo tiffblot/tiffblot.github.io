@@ -43,11 +43,11 @@ export const Header = () => {
         <li className="Header-link Header-close">
           <X />
         </li>
-        <HeaderLink to="/">watercolor</HeaderLink>
-        <HeaderLink to="/graphics">graphics</HeaderLink>
-        <HeaderLink to="/downloads">downloads</HeaderLink>
+        <HeaderLink to="/">portfolio</HeaderLink>
+        <!-- <HeaderLink to="/graphics">graphics</HeaderLink> -->
+        <!-- <HeaderLink to="/downloads">downloads</HeaderLink> -->
         <HeaderLink to="/about">about</HeaderLink>
-        <HeaderLink href="https://www.etsy.com/shop/teashopbytiff">
+        <HeaderLink href="https://tiffblot.bigcartel.com/">
           shop
         </HeaderLink>
         <HeaderLink href="https://www.instagram.com/tiffblot/">
