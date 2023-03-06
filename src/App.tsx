@@ -1,13 +1,13 @@
+import "./App.css";
+
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
 import { Header } from "./components/Header";
-import { HomePage } from "./pages/HomePage";
-import { GraphicsPage } from "./pages/GraphicsPage";
-import { DownloadsPage } from "./pages/DownloadsPage";
 import { AboutPage } from "./pages/AboutPage";
-
-import "./App.css";
+import { DownloadsPage } from "./pages/DownloadsPage";
+import { GraphicsPage } from "./pages/GraphicsPage";
+import { HomePage } from "./pages/HomePage";
 
 function App() {
   return (
