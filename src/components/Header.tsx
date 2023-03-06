@@ -1,11 +1,19 @@
-import React, { useState } from "react";
-import Box from "ui-box";
-import { Link } from "react-router-dom";
-import { Instagram, Menu, X } from "react-feather";
-
 import "./Header.css";
 
-const HeaderLink = ({ href = "", to = "", children }) => {
+import React, { useState } from "react";
+import { Instagram, Menu, X } from "react-feather";
+import { Link } from "react-router-dom";
+import Box from "ui-box";
+
+const HeaderLink = ({
+  href = "",
+  to = "",
+  children,
+}: {
+  href?: string;
+  to?: string;
+  children: any;
+}) => {
   if (href) {
     return (
       <li className="Header-link">
@@ -27,7 +35,7 @@ export const Header = () => {
 
   return (
     <Box className="App-page Header-container">
-      <Link to="/">
+      <Link className="Header-logo" to="/">
         <Box is="img" alt="Tiff" src="tiff_logo_2022.png" />
       </Link>
 
@@ -47,9 +55,7 @@ export const Header = () => {
         <HeaderLink to="/">graphics</HeaderLink>
         <HeaderLink to="/">downloads</HeaderLink>
         <HeaderLink to="/about">about</HeaderLink>
-        <HeaderLink href="https://tiffblot.bigcartel.com/">
-          shop
-        </HeaderLink>
+        <HeaderLink href="https://tiffblot.bigcartel.com/">shop</HeaderLink>
         <HeaderLink href="https://www.instagram.com/tiffblot/">
           <Instagram />
         </HeaderLink>

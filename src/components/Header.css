@@ -6,11 +6,21 @@
   margin-bottom: 1.5rem;
 }
 
+.Header-logo {
+  flex-shrink: 1;
+}
+.Header-logo img {
+  width: 100%;
+}
+
 .Header-linkContainer {
   display: flex;
   align-items: center;
   padding: 0;
   margin: 0 1rem;
+
+  flex-grow: 1;
+  min-width: max-content;
 }
 
 .Header-link {
