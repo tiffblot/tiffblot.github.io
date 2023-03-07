@@ -46,6 +46,7 @@
 @media only screen and (max-width: 600px) {
   .Header-hamburger {
     display: block;
+    min-width: 36px;
   }
   .Header-close {
     display: block;
