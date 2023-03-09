@@ -16,6 +16,87 @@ interface GalleryImage {
 
 const CLIENT_ID = "fad804cc7c9498e";
 
+export const Gallery = ({
+  filter,
+  download = false,
+}: {
+  filter?: string;
+  download: boolean;
+}) => {
+  const screenWidth = useScreenWidth();
+  const images = useGallery();
+  const filteredImages =
+    images?.filter((img) => img.tags.indexOf(filter || "") > -1) || [];
+
+  const columns = useMemo(() => {
+    let maxCols = screenWidth < 600 ? 1 : screenWidth < 900 ? 2 : 3;
+
+    const cols = [];
+    for (let i = 0; i < maxCols; i++) {
+      const col = [];
+      for (let j = i; j < filteredImages.length; j += maxCols) {
+        col.push(filteredImages[j]);
+      }
+      cols.push(col);
+    }
+
+    return cols;
+  }, [filteredImages, screenWidth]);
+
+  return (
+    <Box className="App-page Gallery-container">
+      {columns.map((imgs, j) => (
+        <div key={j}>
+          {imgs.map((img, i) => {
+            return (
+              <div key={i} className="Gallery-single">
+                <img
+                  className="Gallery-image"
+                  src={img.src}
+                  alt={img.description}
+                />
+                <div className="Gallery-description">
+                  {img.description}
+                  {download && (
+                    <Box
+                      is="a"
+                      marginLeft=".4em"
+                      href={img.src}
+                      download={
+                        img.description
+                          ? img.description.split(" ")[0] + ".png"
+                          : "tiffblot.png"
+                      }
+                      title={img.description}
+                    >
+                      [download]
+                    </Box>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      ))}
+    </Box>
+  );
+};
+
+function useScreenWidth() {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  function update() {
+    setScreenWidth(window.innerWidth);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", update);
+    return window.removeEventListener("resize", update);
+  }, []);
+
+  return screenWidth;
+}
+
 function useGallery() {
   const [value, setValue] = useState<{
     data: { images: FetchedImage[] };
@@ -51,54 +132,3 @@ function useGallery() {
 
   return images;
 }
-
-export const Gallery = ({
-  filter,
-  download = false,
-}: {
-  filter?: string;
-  download: boolean;
-}) => {
-  const images = useGallery();
-  const filteredImages =
-    images?.filter((img) => img.tags.indexOf(filter || "") > -1) || [];
-
-  return (
-    <>
-      <Box className="App-page Gallery-container">
-        <Box>
-          {filteredImages.map((img, i) => {
-            return (
-              <Box key={i} className="Gallery-single">
-                <Box
-                  is="img"
-                  className="Gallery-image"
-                  src={img.src}
-                  alt={img.description}
-                />
-                <Box className="Gallery-description">
-                  {img.description}
-                  {download && (
-                    <Box
-                      is="a"
-                      marginLeft=".4em"
-                      href={img.src}
-                      download={
-                        img.description
-                          ? img.description.split(" ")[0] + ".png"
-                          : "tiffblot.png"
-                      }
-                      title={img.description}
-                    >
-                      [download]
-                    </Box>
-                  )}
-                </Box>
-              </Box>
-            );
-          })}
-        </Box>
-      </Box>
-    </>
-  );
-};
