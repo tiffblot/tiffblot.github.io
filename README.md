@@ -22,3 +22,9 @@ To update headers:
 3. Make any necessary page files in `pages/`. See `pages/EventsPage.tsx` for an example of creating a specific filter gallery.
 
 If you're testing on local, imgur might not show any photos if you just run `yarn start`... I still haven't fixed that (it also doesn't work via `yarn build`), so honestly have just been testing in prod.
+
+### Deployment
+
+To deploy the changes, run `yarn build`.
+
+Copy the files from `build/` to the root folder. Then, commit and push.
