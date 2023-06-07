@@ -5,8 +5,8 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
 import { Header } from "./components/Header";
 import { AboutPage } from "./pages/AboutPage";
-import { DownloadsPage } from "./pages/DownloadsPage";
-import { GraphicsPage } from "./pages/GraphicsPage";
+import { ClientWorkPage } from "./pages/ClientWorkPage";
+import { EventsPage } from "./pages/EventsPage";
 import { HomePage } from "./pages/HomePage";
 
 function App() {
@@ -17,11 +17,11 @@ function App() {
         <Route path="/about">
           <AboutPage />
         </Route>
-        <Route path="/graphics">
-          <GraphicsPage />
+        <Route path="/clientWork">
+          <ClientWorkPage />
         </Route>
-        <Route path="/downloads">
-          <DownloadsPage />
+        <Route path="/events">
+          <EventsPage />
         </Route>
         <Route path="/">
           <HomePage />

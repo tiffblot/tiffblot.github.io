@@ -21,7 +21,7 @@ export const Gallery = ({
   download = false,
 }: {
   filter?: string;
-  download: boolean;
+  download?: boolean;
 }) => {
   const screenWidth = useScreenWidth();
   const images = useGallery();

@@ -52,8 +52,8 @@ export const Header = () => {
           <X />
         </li>
         <HeaderLink to="/">portfolio</HeaderLink>
-        <HeaderLink to="/">graphics</HeaderLink>
-        <HeaderLink to="/">downloads</HeaderLink>
+        <HeaderLink to="/clientWork">client work</HeaderLink>
+        <HeaderLink to="/events">events</HeaderLink>
         <HeaderLink to="/about">about</HeaderLink>
         <HeaderLink href="https://tiffblot.bigcartel.com/">shop</HeaderLink>
         <HeaderLink href="https://www.instagram.com/tiffblot/">
