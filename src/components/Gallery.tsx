@@ -54,6 +54,7 @@ export const Gallery = ({
                   className="Gallery-image"
                   src={img.src}
                   alt={img.description}
+                  loading="lazy"
                 />
                 <div className="Gallery-description">
                   {img.description}
