@@ -47,6 +47,12 @@
   .Header-hamburger {
     display: block;
     min-width: 36px;
+
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    cursor: pointer;
   }
   .Header-close {
     display: block;

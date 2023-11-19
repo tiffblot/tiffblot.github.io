@@ -8,6 +8,7 @@ import { AboutPage } from "./pages/AboutPage";
 import { ClientWorkPage } from "./pages/ClientWorkPage";
 import { EventsPage } from "./pages/EventsPage";
 import { HomePage } from "./pages/HomePage";
+import { MerchPage } from "./pages/MerchPage";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route path="/clientWork">
           <ClientWorkPage />
+        </Route>
+        <Route path="/merch">
+          <MerchPage />
         </Route>
         <Route path="/events">
           <EventsPage />

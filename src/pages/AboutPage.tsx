@@ -25,25 +25,40 @@ export const AboutPage = () => {
         </a>
         !
       </Box>
-      <p>You can find my art in stores at:</p>
-      <p>
-        Homegrown Decatur
-        <br />
-        412 Church St, Decatur, GA 30030
-      </p>
-      <p>
-        July Moon Bakery & Cafe
-        <br />
-        230 S Main St Suite Z, Alpharetta, GA 30009
-      </p>
-      <p>
-        Mischief Oakland
-        <br />
-        3908 MacArthur Blvd, Oakland, CA 94619
-      </p>
       <p>
         Email:{" "}
         <a href="mailto:teashopbytiff@gmail.com">teashopbytiff@gmail.com</a>
+      </p>
+
+      <h3>Conventions</h3>
+      <p>
+        JapanFest 2023 (Duluth, GA) with Musubee ATL
+        <br /> MomoCon 2023 (Atlanta, GA)
+        <br /> Anime Weekend Atlanta 2022 (Atlanta, GA)
+      </p>
+
+      <h3>Exhibits</h3>
+      <p>
+        Being Ourselves 2023 Asian Cultural Empowerment (Atlanta, GA)
+        <br />
+        Labor of Love: Dumpling Fest 2023 Asian American Advocacy Fund (Atlanta,
+        GA)
+        <br />
+        Have A Nice Day 2023 Chunky Things (Los Angeles, CA)
+        <br />
+        Year of the Rabbit 2023 The Bakery (Atlanta, GA)
+        <br />
+        Hua Yuan: AAPI Artist in Bloom 2023 Roswell Cultural Arts Center
+        (Atlanta, GA)
+      </p>
+
+      <h3>Stockists</h3>
+      <p>
+        Homegrown Decatur (Decatur, GA)
+        <br />
+        July Moon Bakery & Café (Alpharetta, GA)
+        <br />
+        Mischief Oakland (Oakland, CA)
       </p>
     </Box>
   );

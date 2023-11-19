@@ -52,6 +52,7 @@ export const Header = () => {
           <X />
         </li>
         <HeaderLink to="/">portfolio</HeaderLink>
+        <HeaderLink to="/merch">merch</HeaderLink>
         <HeaderLink to="/clientWork">client work</HeaderLink>
         <HeaderLink to="/events">events</HeaderLink>
         <HeaderLink to="/about">about</HeaderLink>
