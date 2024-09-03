@@ -52,9 +52,15 @@ export const AboutPage = () => {
 
       <h3>Conventions</h3>
       <p>
+        Anime NYC 2024 (New York City, NY)
+        <br />
+        Dreamhack ATL 2024 (Atlanta, GA)
+        <br />
         JapanFest 2023 (Duluth, GA) with Musubee ATL
-        <br /> MomoCon 2023 (Atlanta, GA)
-        <br /> Anime Weekend Atlanta 2022 (Atlanta, GA)
+        <br />
+        MomoCon 2023 (Atlanta, GA)
+        <br />
+        Anime Weekend Atlanta 2022 (Atlanta, GA)
       </p>
 
       <h3>Exhibits</h3>
