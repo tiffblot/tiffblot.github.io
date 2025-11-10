@@ -27,8 +27,28 @@ a:hover {
   padding: 0 2rem;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 4rem;
 }
 
 h3 {
   font-size: 1rem;
+}
+
+.noMargin {
+  margin: 0;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-1 {
+  gap: 0.5rem;
+}
+
+.child-noMargin {
+  & > * {
+    margin: 0;
+  }
 }
