@@ -34,6 +34,16 @@ export const AboutPage = () => {
       <div className="flexColumn gap-1 child-noMargin">
         <p>
           <a
+            href="https://atlanta.eater.com/maps/best-restaurants-buford-highway-atlanta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Eater Atlanta: 15 Best Buford Highway Restaurants to Know
+          </a>
+          , 2025
+        </p>
+        <p>
+          <a
             href="https://corporate.comcast.com/stories/comcast-nbcuniversal-celebrates-brilliance-courage-aapi-communities"
             target="_blank"
             rel="noopener noreferrer"
